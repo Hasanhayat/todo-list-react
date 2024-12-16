@@ -22,6 +22,7 @@ function App() {
       <h1 className="heading">Todo List</h1>
       <form onSubmit={addItem}>
         <input
+          placeholder="ITEM"
           type="text"
           value={inputVal}
           onChange={(event) => {

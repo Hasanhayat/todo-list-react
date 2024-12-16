@@ -19,6 +19,7 @@ function App() {
   };
   return (
     <div className="App">
+      <h1 className="heading">Todo List</h1>
       <form onSubmit={addItem}>
         <input
           type="text"
@@ -31,10 +32,19 @@ function App() {
       </form>
 
       <div className="items">
-        {lists.map((ele,i)=>{
-          return(
-            <div className="item"><p>{ele}</p> <button onClick={()=>{removeItem(i)}}>DELETE</button></div>
-          )
+        {lists.map((ele, i) => {
+          return (
+            <div className="item">
+              <p>{ele}</p>{" "}
+              <button
+                onClick={() => {
+                  removeItem(i);
+                }}
+              >
+                DELETE
+              </button>
+            </div>
+          );
         })}
       </div>
     </div>
